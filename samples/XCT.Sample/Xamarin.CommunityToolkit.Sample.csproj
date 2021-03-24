@@ -22,6 +22,9 @@
   </ItemGroup>
   
   <ItemGroup>
+    <Compile Update="Pages\Views\TabView\TabItemTextCasingPage.xaml.cs">
+      <DependentUpon>TabItemTextCasingPage.xaml</DependentUpon>
+    </Compile>
     <Compile Update="Resx\AppResources.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
@@ -30,6 +33,9 @@
   </ItemGroup>
   
   <ItemGroup>
+    <EmbeddedResource Update="Pages\Views\TabView\TabItemTextCasingPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="Resx\AppResources.es.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <DependentUpon>AppResources.resx</DependentUpon>

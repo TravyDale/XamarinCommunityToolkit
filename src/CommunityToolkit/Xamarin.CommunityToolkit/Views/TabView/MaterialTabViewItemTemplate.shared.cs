@@ -69,7 +69,9 @@ namespace Xamarin.CommunityToolkit.UI.Views
 
 			icon.SetBinding(Image.SourceProperty, "CurrentIcon");
 
-			text.SetBinding(Label.TextProperty, "Text", BindingMode.OneWay, new TextCaseConverter { Type = TextCaseType.Upper });
+			var textCasing = Parent.GetPropertyIfSet(TabViewItem.TextCaseProperty, TextCaseType.Upper);
+
+			text.SetBinding(Label.TextProperty, "Text", BindingMode.OneWay, new TextCaseConverter { Type = textCasing });
 			text.SetBinding(Label.TextColorProperty, "CurrentTextColor");
 			text.SetBinding(Label.FontSizeProperty, "CurrentFontSize");
 			text.SetBinding(Label.FontAttributesProperty, "CurrentFontAttributes");

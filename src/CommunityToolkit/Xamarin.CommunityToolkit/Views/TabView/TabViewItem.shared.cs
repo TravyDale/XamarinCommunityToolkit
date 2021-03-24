@@ -1,6 +1,7 @@
 ﻿using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
 using System.Windows.Input;
+using Xamarin.CommunityToolkit.Converters;
 using Xamarin.Forms;
 using Xamarin.Forms.Internals;
 
@@ -139,6 +140,15 @@ namespace Xamarin.CommunityToolkit.UI.Views
 		{
 			get => (bool)GetValue(IsSelectedProperty);
 			set => SetValue(IsSelectedProperty, value);
+		}
+
+		public static readonly BindableProperty TextCaseProperty =
+		   BindableProperty.Create(nameof(TextCase), typeof(TextCaseType), typeof(TabViewItem), TextCaseType.Upper);
+
+		public TextCaseType TextCase
+		{
+			get => (TextCaseType)GetValue(TextCaseProperty);
+			set => SetValue(TextCaseProperty, value);
 		}
 
 		static async void OnIsSelectedChanged(BindableObject bindable, object oldValue, object newValue)

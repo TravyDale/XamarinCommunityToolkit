@@ -46,6 +46,9 @@ namespace Xamarin.CommunityToolkit.Sample.ViewModels.Views
 
 			new SectionModel(typeof(LazyTabPage), "LazyLoadingTab",
 				"See how you can implement LazyViews that are loaded just when you navigate to them"),
+
+			new SectionModel(typeof(TabItemTextCasingPage), "TabItemTextCasing",
+				"Using text casing for TabItem text")
 		};
 	}
 }
